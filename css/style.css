@@ -72,6 +72,10 @@ body {
   text-align: center;
   font-family: "Poppins", sans-serif;
 }
+body main .scroll-uxui {
+  /* scroll-behavior: smooth; */
+  scroll-margin: 130px;
+}
 body main .titulo-main {
   padding: 3rem 0;
 }
@@ -79,9 +83,6 @@ body main .titulo-main {
   body main .titulo-main {
     padding: 0.2rem;
   }
-}
-body main .titulo-main:hover {
-  padding: 2.5rem;
 }
 body .sobre-mi-contenedor .bloque-sobre-mi {
   background-color: white;

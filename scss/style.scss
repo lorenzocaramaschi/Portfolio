@@ -8,6 +8,8 @@
     src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
 }
 
+
+
 h1 {
     font-size: 6rem;
     color: black;
@@ -46,14 +48,14 @@ h3 {
 
 }
 
-.navbar-brand{
+.navbar-brand {
     @media (max-width: 480px) {
         width: 40px;
         height: 60px;
     }
 }
 
-li{
+li {
     @media (max-width: 480px) {
         font-size: 0.7rem;
     }
@@ -67,9 +69,15 @@ p {
 
 body {
 
+    main .scroll-uxui {
+        scroll-behavior: smooth;
+        scroll-margin: 130px;
+    }
+
     background-color: rgb(199, 199, 199);
     text-align: center;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins',
+    sans-serif;
 
     main .titulo-main {
         padding: 3rem 0;
@@ -79,11 +87,7 @@ body {
         }
     }
 
-    main .titulo-main:hover {
 
-        padding: 2.5rem;
-
-    }
 
     .sobre-mi-contenedor {
         .bloque-sobre-mi {
@@ -121,7 +125,7 @@ body {
                 flex-direction: column;
             }
 
-            
+
 
 
 
@@ -204,7 +208,7 @@ body {
                 padding-top: 5px;
                 padding-bottom: 5px;
                 color: black;
-                font-weight: bold;                
+                font-weight: bold;
             }
 
             .html {
@@ -297,11 +301,11 @@ body {
             }
 
             @media (min-width: 768px) and (max-width: 1280px) {
-                grid-template-columns: repeat(2,1fr);
+                grid-template-columns: repeat(2, 1fr);
             }
 
             @media (min-width: 481px) and (max-width: 768px) {
-                grid-template-columns: repeat(2,1fr);
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .card {
