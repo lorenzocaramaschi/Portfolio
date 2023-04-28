@@ -8,8 +8,20 @@ import {
   AiFillMail,
 } from "react-icons/ai";
 import Image from "next/image";
-import loloFace from "../../public/favicon.ico";
+import loloFace from "../../public/LoloPic.png";
 import { useState } from "react";
+import chatBubble from "../../public/chat-bubble-front-color.png";
+import clock from "../../public/clock-front-color.png";
+import medal from "../../public/medal-front-color.png";
+import notebook from "../../public/notebook-front-color.png";
+import thumbUp from "../../public/thumb-up-front-color.png";
+import tool from "../../public/tool-front-color.png";
+import gagEnGug from "../../public/gag-en-gug.png";
+import chatty from "../../public/chatty.png";
+import fundapp from "../../public/fundapp.png";
+import torneoslbdl from "../../public/torneoslbdl.png";
+import buscarPro from "../../public/buscar-pro.png";
+import Link from "next/link";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -39,20 +51,24 @@ export default function Home() {
                 </h1>
                 <ul className="flex items-center">
                   <li
-                    className="font-bold text-m mx-3 cursor-pointer dark:text-white"
-                    onClick={() => language === "EN" ? language === setLanguage("ES") : setLanguage("EN")}
+                    className="font-bold text-m mx-3 cursor-pointer dark:text-white transition duration-300 hover:text-teal-500 dark:hover:text-teal-500"
+                    onClick={() =>
+                      language === "EN"
+                        ? language === setLanguage("ES")
+                        : setLanguage("EN")
+                    }
                   >
                     {language}
                   </li>
                   <li>
                     <BsFillMoonStarsFill
                       onClick={() => setDarkMode(!darkMode)}
-                      className="cursor-pointer text-2xl dark:text-white"
+                      className="cursor-pointer transition-all duration-300 hover:text-teal-500 text-2xl dark:text-white dark:hover:text-teal-500 "
                     />
                   </li>
                   <li>
                     <a
-                      className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
+                      className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8  transition-all duration-200 hover:py-3"
                       href="/CV-Lorenzo Caramaschi-Front-End Developer.pdf"
                       download="CV-Lorenzo Caramaschi-Front-End Developer.pdf"
                     >
@@ -75,37 +91,42 @@ export default function Home() {
                   I am looking for my first job as a Frontend Developer
                 </p>
               </div>
-              <div className="text-5xl flex justify-center gap-8 py-3 text-black dark:text-teal-500">
+              <div className="text-5xl flex justify-center gap-8 py-3 text-black md: dark:text-teal-500">
                 <a href="https://twitter.com/loluza_" target="_blank">
-                  <AiFillTwitterCircle />
+                  <AiFillTwitterCircle className="duration-200 transition-all hover:mx-2" />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/lorenzo-caramaschi-desarrollador-fullstack/"
                   target="_blank"
                 >
-                  <AiFillLinkedin />
+                  <AiFillLinkedin className="duration-200 transition-all hover:mx-2" />
                 </a>
                 <a
                   href="https://www.youtube.com/channel/UCh7VlBeelGrITY7AX5-veyg"
                   target="_blank"
                 >
-                  <AiFillYoutube />
+                  <AiFillYoutube className="duration-200 transition-all hover:mx-2" />
                 </a>
                 <a href="https://github.com/lorenzocaramaschi" target="_blank">
-                  <AiFillGithub />
+                  <AiFillGithub className="duration-200 transition-all hover:mx-2" />
                 </a>
                 <a href="mailto:caramaschilorenzo@gmail.com" target="_blank">
-                  <AiFillMail />
+                  <AiFillMail className="duration-200 transition-all hover:mx-2" />
                 </a>
               </div>
-              <div className="relative mx-auto bg-gradient-to-b from-teal-500 to-teal-950 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
-                <Image src={loloFace} fill className="object-cover" />
+              <div className="relative mx-auto bg-gradient-to-b from-teal-500 to-teal-950 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96  transition duration-200 hover:scale-110">
+                <Image
+                  src={loloFace}
+                  alt="logo Lorenzo Caramaschi"
+                  fill
+                  className="object-cover transition-all duration-300"
+                />
               </div>
             </section>
 
             <section>
               <div>
-                <h3 className="text-5xl font-bold py-1 dark:text-white">
+                <h3 className="text-5xl font-bold py-1 dark:text-white mt-10">
                   My Goal
                 </h3>
                 <p className="text-md py-5 laeding-8 text-gray-800  dark:text-gray-400">
@@ -120,7 +141,12 @@ export default function Home() {
               </div>
               <div className="lg:grid grid-cols-3 grid-flow-row">
                 <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:shadow-teal-500">
-                  <Image />
+                  <Image
+                    src={notebook}
+                    width={"100%"}
+                    height={"100%"}
+                    alt="education"
+                  />
                   <h3 className="text-3xl font-bold pt-8 pb-2 dark:text-white">
                     Education
                   </h3>
@@ -168,7 +194,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:shadow-teal-500">
-                  <Image />
+                  <Image
+                    src={clock}
+                    width={"100%"}
+                    height={"100%"}
+                    alt="availability"
+                  />
                   <h3 className="text-3xl font-bold pt-8 pb-2 dark:text-white">
                     Availability
                   </h3>
@@ -177,7 +208,12 @@ export default function Home() {
                   </h4>
                 </div>
                 <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:shadow-teal-500">
-                  <Image />
+                  <Image
+                    src={medal}
+                    width={"100%"}
+                    height={"100%"}
+                    alt="courses"
+                  />
                   <h3 className="text-3xl font-bold pt-8 pb-2 dark:text-white">
                     Courses and Trainings
                   </h3>
@@ -194,7 +230,12 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:shadow-teal-500">
-                  <Image />
+                  <Image
+                    src={tool}
+                    width={"100%"}
+                    height={"100%"}
+                    alt="skills"
+                  />
                   <h3 className="text-3xl font-bold pt-8 pb-2 dark:text-white">
                     Skills
                   </h3>
@@ -238,7 +279,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:shadow-teal-500">
-                  <Image />
+                  <Image
+                    src={thumbUp}
+                    width={"100%"}
+                    height={"100%"}
+                    alt="soft skills"
+                  />
                   <h3 className="text-3xl font-bold pt-8 pb-2 dark:text-white">
                     Soft skills
                   </h3>
@@ -251,7 +297,12 @@ export default function Home() {
                   </ul>
                 </div>
                 <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:shadow-teal-500">
-                  <Image />
+                  <Image
+                    src={chatBubble}
+                    width={"100%"}
+                    height={"100%"}
+                    alt="language"
+                  />
                   <h3 className="text-3xl font-bold pt-8 pb-2 dark:text-white">
                     Languages
                   </h3>
@@ -268,30 +319,93 @@ export default function Home() {
                   Portfolio
                 </h3>
                 <p className="text-md leading-8 text-gray-800 py-2 dark:text-gray-400">
-                  These are the top projects i've done or that im working on!
+                  These are the top projects i have done or that im working on!
                 </p>
               </div>
-              <div className="flex flex-col gap-10 py-10 lg:flex-wrap">
-                <div className="basis-1/3 flex-1">
-                  <Image
-                    className="rounded-lg object-cover"
-                    width={"100%"}
-                    height={"100%"}
-                  />
+              <div className="grid gap-10 py-10 grid-cols-1 lg:grid-cols-2">
+                <div className="shadow-lg bg-gradient-to-r from-cyan-900 to-teal-200 rounded-lg transition-all duration-300 hover:p-3 ">
+                  <Link
+                    target="_blank"
+                    href={"https://torneos-lbdl.vercel.app"}
+                  >
+                    <Image
+                      src={torneoslbdl}
+                      className="rounded-lg object-cover transition-all"
+                      width={"100%"}
+                      height={"100%"}
+                      alt="torneoslbdl project"
+                    />
+                  </Link>
+                  <p className="py-2 px-4 bg-grado text-white">
+                    Tournament App (MongoDB,Express,Next.js and Node.js)
+                  </p>
                 </div>
-                <div className="basis-1/3 flex-1">
-                  <Image
-                    className="rounded-lg object-cover"
-                    width={"100%"}
-                    height={"100%"}
-                  />
+                <div className="shadow-lg bg-gradient-to-r from-cyan-900 to-teal-200 rounded-lg transition-all duration-300 hover:p-3">
+                  <Link
+                    target="_blank"
+                    href={"https://chatty-nx05.onrender.com"}
+                  >
+                    <Image
+                      src={chatty}
+                      className="rounded-lg object-cover transition-all"
+                      width={"100%"}
+                      height={"100%"}
+                      alt="chatty project"
+                    />
+                  </Link>
+                  <p className="py-2 px-4 bg-grado text-white">
+                    Social Network (MongoDB,Express,React.js and Node.js)
+                  </p>
                 </div>
-                <div className="basis-1/3 flex-1">
-                  <Image
-                    className="rounded-lg object-cover"
-                    width={"100%"}
-                    height={"100%"}
-                  />
+                <div className="shadow-lg bg-gradient-to-r from-cyan-900 to-teal-200 rounded-lg transition-all duration-300 hover:p-3">
+                  <Link
+                    target="_blank"
+                    href={
+                      "https://lorenzocaramaschi.github.io/FundApp-Caramaschi/"
+                    }
+                  >
+                    <Image
+                      src={fundapp}
+                      className="rounded-lg object-cover transition-all"
+                      width={"100%"}
+                      height={"100%"}
+                      alt="fundapp project"
+                    />
+                  </Link>
+                  <p className="py-2 px-4 bg-grado text-white">
+                    Ecommerce (React.js)
+                  </p>
+                </div>
+                <div className="shadow-lg bg-gradient-to-r from-cyan-900 to-teal-200 rounded-lg transition-all duration-300 hover:p-3">
+                  <Link
+                    target="_blank"
+                    href={"https://lorenzocaramaschi.github.io/BuscarPro/"}
+                  >
+                    <Image
+                      src={buscarPro}
+                      className="rounded-lg object-cover transition-all"
+                      width={"100%"}
+                      height={"100%"}
+                      alt="buscarpro project"
+                    />
+                  </Link>
+                  <p className="py-2 px-4 bg-grado text-white">
+                    Ecommerce (HTML5, CSS3 and Javascript)
+                  </p>
+                </div>
+                <div className="shadow-lg bg-gradient-to-r from-cyan-900 to-teal-200 rounded-lg transition-all duration-300 hover:p-3">
+                  <Link target="_blank" href={"https://gagengug.netlify.app"}>
+                    <Image
+                      src={gagEnGug}
+                      className="rounded-lg object-cover transition-all"
+                      width={"100%"}
+                      height={"100%"}
+                      alt="gagengug project"
+                    />
+                  </Link>
+                  <p className="py-2 px-4 bg-grado text-white">
+                    Blog (HTML5 and SASS)
+                  </p>
                 </div>
               </div>
             </section>
@@ -319,20 +433,24 @@ export default function Home() {
                 </h1>
                 <ul className="flex items-center">
                   <li
-                    className="font-bold text-m mx-3 cursor-pointer dark:text-white"
-                    onClick={() => language === "EN" ? language === setLanguage("ES") : setLanguage("EN")}
+                    className="font-bold text-m mx-3 cursor-pointer dark:text-white transition duration-300 hover:text-teal-500 dark:hover:text-teal-500"
+                    onClick={() =>
+                      language === "EN"
+                        ? language === setLanguage("ES")
+                        : setLanguage("EN")
+                    }
                   >
                     {language}
                   </li>
                   <li>
                     <BsFillMoonStarsFill
                       onClick={() => setDarkMode(!darkMode)}
-                      className="cursor-pointer text-2xl dark:text-white"
+                      className="cursor-pointer text-2xl transition-all duration-300 hover:text-teal-500 dark:text-white dark:hover:text-teal-500 "
                     />
                   </li>
                   <li>
                     <a
-                      className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
+                      className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 transition-all duration-200 hover:py-3"
                       href="/CV-Lorenzo Caramaschi-Desarrollador Front End.pdf"
                       download="CV-Lorenzo Caramaschi-Desarrollador Front-End.pdf"
                     >
@@ -342,7 +460,7 @@ export default function Home() {
                 </ul>
               </nav>
               <div className="text-center p-10">
-                <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
+                <h2 className="text-4xl py-2 text-teal-600 font-medium md:text-6xl">
                   Lorenzo Caramaschi
                 </h2>
                 <h3 className="text-2xl py-2 md:text-3xl dark:text-white">
@@ -356,37 +474,42 @@ export default function Home() {
                   Frontend
                 </p>
               </div>
-              <div className="text-5xl flex justify-center gap-8 py-3 text-black dark:text-teal-500">
+              <div className="text-4xl flex justify-center gap-8 py-3 text-black md:text-5xl dark:text-teal-500">
                 <a href="https://twitter.com/loluza_" target="_blank">
-                  <AiFillTwitterCircle />
+                  <AiFillTwitterCircle className="duration-200 transition-all hover:mx-2" />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/lorenzo-caramaschi-desarrollador-fullstack/"
                   target="_blank"
                 >
-                  <AiFillLinkedin />
+                  <AiFillLinkedin className="duration-200 transition-all hover:mx-2" />
                 </a>
                 <a
                   href="https://www.youtube.com/channel/UCh7VlBeelGrITY7AX5-veyg"
                   target="_blank"
                 >
-                  <AiFillYoutube />
+                  <AiFillYoutube className="duration-200 transition-all  hover:mx-2 " />
                 </a>
                 <a href="https://github.com/lorenzocaramaschi" target="_blank">
-                  <AiFillGithub />
+                  <AiFillGithub className="duration-200 transition-all  hover:mx-2" />
                 </a>
                 <a href="mailto:caramaschilorenzo@gmail.com" target="_blank">
-                  <AiFillMail />
+                  <AiFillMail className="duration-200 transition-all  hover:mx-2" />
                 </a>
               </div>
-              <div className="relative mx-auto bg-gradient-to-b from-teal-500 to-teal-950 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
-                <Image src={loloFace} fill className="object-cover" />
+              <div className="relative mx-auto bg-gradient-to-b from-teal-500 to-teal-950 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96  transition duration-200 hover:scale-110">
+                <Image
+                  src={loloFace}
+                  alt="logo Lorenzo Caramaschi"
+                  fill
+                  className="object-cover transition-all duration-300"
+                />
               </div>
             </section>
 
             <section>
               <div>
-                <h3 className="text-5xl font-bold py-1 dark:text-white">
+                <h3 className="text-5xl font-bold py-1 dark:text-white mt-10">
                   Objetivos
                 </h3>
                 <p className="text-md py-5 laeding-8 text-gray-800  dark:text-gray-400">
@@ -404,7 +527,12 @@ export default function Home() {
               </div>
               <div className="lg:grid grid-cols-3 grid-flow-row">
                 <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:shadow-teal-500">
-                  <Image />
+                  <Image
+                    src={notebook}
+                    width={"100%"}
+                    height={"100%"}
+                    alt="Educacion"
+                  />
                   <h3 className="text-3xl font-bold pt-8 pb-2 dark:text-white">
                     Educación
                   </h3>
@@ -452,7 +580,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:shadow-teal-500">
-                  <Image />
+                  <Image
+                    src={clock}
+                    width={"100%"}
+                    height={"100%"}
+                    alt="disponibilidad"
+                  />
                   <h3 className="text-3xl font-bold pt-8 pb-2 dark:text-white">
                     Disponibilidad
                   </h3>
@@ -461,7 +594,12 @@ export default function Home() {
                   </h4>
                 </div>
                 <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:shadow-teal-500">
-                  <Image />
+                  <Image
+                    src={medal}
+                    width={"100%"}
+                    height={"100%"}
+                    alt="cursos"
+                  />
                   <h3 className="text-3xl font-bold pt-8 pb-2 dark:text-white">
                     Cursos y capacitaciones
                   </h3>
@@ -478,7 +616,12 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:shadow-teal-500">
-                  <Image />
+                  <Image
+                    src={tool}
+                    width={"100%"}
+                    height={"100%"}
+                    alt="competencias"
+                  />
                   <h3 className="text-3xl font-bold pt-8 pb-2 dark:text-white">
                     Competencias
                   </h3>
@@ -522,7 +665,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:shadow-teal-500">
-                  <Image />
+                  <Image
+                    src={thumbUp}
+                    width={"100%"}
+                    height={"100%"}
+                    alt="aptitudes"
+                  />
                   <h3 className="text-3xl font-bold pt-8 pb-2 dark:text-white">
                     Aptitudes
                   </h3>
@@ -535,7 +683,12 @@ export default function Home() {
                   </ul>
                 </div>
                 <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:shadow-teal-500">
-                  <Image />
+                  <Image
+                    src={chatBubble}
+                    width={"100%"}
+                    height={"100%"}
+                    alt="idiomas"
+                  />
                   <h3 className="text-3xl font-bold pt-8 pb-2 dark:text-white">
                     Idiomas
                   </h3>
@@ -556,27 +709,90 @@ export default function Home() {
                   en los que estoy trabajando!
                 </p>
               </div>
-              <div className="flex flex-col gap-10 py-10 lg:flex-wrap">
-                <div className="basis-1/3 flex-1">
-                  <Image
-                    className="rounded-lg object-cover"
-                    width={"100%"}
-                    height={"100%"}
-                  />
+              <div className="grid gap-10 py-10 grid-cols-1 lg:grid-cols-2">
+                <div className="shadow-lg bg-gradient-to-r from-cyan-900 to-teal-200 rounded-lg transition-all duration-300 hover:p-3 ">
+                  <Link
+                    target="_blank"
+                    href={"https://torneos-lbdl.vercel.app"}
+                  >
+                    <Image
+                      src={torneoslbdl}
+                      className="rounded-lg object-cover"
+                      width={"100%"}
+                      height={"100%"}
+                      alt="torneoslbdl proyecto"
+                    />
+                  </Link>
+                  <p className="py-2 px-4 bg-grado text-white">
+                    Organizador de torneos (MongoDB,Express,Next.js y Node.js)
+                  </p>
                 </div>
-                <div className="basis-1/3 flex-1">
-                  <Image
-                    className="rounded-lg object-cover"
-                    width={"100%"}
-                    height={"100%"}
-                  />
+                <div className="shadow-lg bg-gradient-to-r from-cyan-900 to-teal-200 rounded-lg transition-all duration-300 hover:p-3">
+                  <Link
+                    target="_blank"
+                    href={"https://chatty-nx05.onrender.com"}
+                  >
+                    <Image
+                      src={chatty}
+                      className="rounded-lg object-cover"
+                      width={"100%"}
+                      height={"100%"}
+                      alt="chatty proyecto"
+                    />
+                  </Link>
+                  <p className="py-2 px-4 bg-grado text-white">
+                    Red Social (MongoDB,Express,React.js and Node.js)
+                  </p>
                 </div>
-                <div className="basis-1/3 flex-1">
-                  <Image
-                    className="rounded-lg object-cover"
-                    width={"100%"}
-                    height={"100%"}
-                  />
+                <div className="shadow-lg bg-gradient-to-r from-cyan-900 to-teal-200 rounded-lg transition-all duration-300 hover:p-3">
+                  <Link
+                    target="_blank"
+                    href={
+                      "https://lorenzocaramaschi.github.io/FundApp-Caramaschi/"
+                    }
+                  >
+                    <Image
+                      src={fundapp}
+                      className="rounded-lg object-cover"
+                      width={"100%"}
+                      height={"100%"}
+                      alt="fundapp proyecto"
+                    />
+                  </Link>
+                  <p className="py-2 px-4 bg-grado text-white">
+                    Ecommerce (React.js)
+                  </p>
+                </div>
+                <div className="shadow-lg bg-gradient-to-r from-cyan-900 to-teal-200 rounded-lg transition-all duration-300 hover:p-3">
+                  <Link
+                    target="_blank"
+                    href={"https://lorenzocaramaschi.github.io/BuscarPro/"}
+                  >
+                    <Image
+                      src={buscarPro}
+                      className="rounded-lg object-cover"
+                      width={"100%"}
+                      height={"100%"}
+                      alt="buscarpro proyecto"
+                    />
+                  </Link>
+                  <p className="py-2 px-4 bg-grado text-white">
+                    Ecommerce (HTML5, CSS3 y Javascript)
+                  </p>
+                </div>
+                <div className="shadow-lg bg-gradient-to-r from-cyan-900 to-teal-200 rounded-lg transition-all duration-300 hover:p-3">
+                  <Link target="_blank" href={"https://gagengug.netlify.app"}>
+                    <Image
+                      src={gagEnGug}
+                      className="rounded-lg object-cover"
+                      width={"100%"}
+                      height={"100%"}
+                      alt="gagengug proyecto"
+                    />
+                  </Link>
+                  <p className="py-2 px-4 bg-grado text-white">
+                    Blog (HTML5 y SASS)
+                  </p>
                 </div>
               </div>
             </section>
