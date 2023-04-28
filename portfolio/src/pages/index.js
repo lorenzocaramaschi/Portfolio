@@ -91,7 +91,7 @@ export default function Home() {
                   I am looking for my first job as a Frontend Developer
                 </p>
               </div>
-              <div className="text-5xl flex justify-center gap-8 py-3 text-black md: dark:text-teal-500">
+              <div className="text-4xl flex justify-center gap-8 py-3 text-black md: dark:text-teal-500">
                 <a href="https://twitter.com/loluza_" target="_blank">
                   <AiFillTwitterCircle className="duration-200 transition-all hover:mx-2" />
                 </a>
