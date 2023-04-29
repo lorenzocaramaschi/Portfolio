@@ -114,7 +114,7 @@ export default function Home() {
                   <AiFillMail className="duration-200 transition-all hover:mx-2" />
                 </a>
               </div>
-              <div className="relative mx-auto bg-gradient-to-b from-teal-500 to-teal-950 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96  transition duration-200 hover:scale-110">
+              <div className="relative mx-auto bg-gradient-to-b from-teal-500 to-teal-950 rounded-full w-60 h-60 mt-20 overflow-hidden md:h-96 md:w-96  transition duration-200 hover:scale-110">
                 <Image
                   src={loloFace}
                   alt="logo Lorenzo Caramaschi"
